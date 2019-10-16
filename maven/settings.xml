@@ -28,16 +28,6 @@
       </activation>
       <repositories>
         <repository>
-          <id>central</id>
-          <url>http://repo.maven.apache.org/maven2</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-        <repository>
           <id>release</id>
           <url>${env.CDP_REPOSITORY_URL}/${env.CDP_REPOSITORY_MAVEN_RELEASE}</url>
           <snapshots>
@@ -51,9 +41,7 @@
             <enabled>true</enabled>
           </snapshots>
         </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
+        <repository>
           <id>central</id>
           <url>http://repo.maven.apache.org/maven2</url>
           <releases>
@@ -62,7 +50,9 @@
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
-        </pluginRepository>
+        </repository>
+      </repositories>
+      <pluginRepositories>
         <pluginRepository>
           <id>release</id>
           <url>${env.CDP_PLUGINREPOSITORY_URL}/${env.CDP_PLUGINREPOSITORY_MAVEN_RELEASE}</url>
@@ -73,6 +63,16 @@
         <pluginRepository>
           <id>snapshot</id>
           <url>${env.CDP_PLUGINREPOSITORY_URL}/${env.CDP_PLUGINREPOSITORY_MAVEN_SNAPSHOT}</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://repo.maven.apache.org/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
